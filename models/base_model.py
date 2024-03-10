@@ -9,6 +9,7 @@ import models
 
 class BaseModel:
     """Custom base for all the classes in the AirBnb console project
+
     """
 
     def __init__(self, *args, **kwargs):
@@ -40,16 +41,14 @@ class BaseModel:
 
     def save(self):
         """
-        Updates the public instance attribute:
-        'updated_at' - with the current datetime
+        Updates the public instance attribute
         """
         self.updated_at = datetime.utcnow()
         models.storage.save()
 
     def to_dict(self):
         """
-        Method returns a dictionary containing all 
-        keys/values of __dict__ instance
+        Method returns a dictionary 
         """
         map_objects = {}
         for key, value in self.__dict__.items():
