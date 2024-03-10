@@ -20,9 +20,11 @@ class FileStorage:
     __objects = {}
 
     def all(self):
+        """All function"""
         return FileStorage.__objects
 
     def new(self, obj):
+        """new function"""
         key = type(obj).__name__ + '.' + obj.id
         FileStorage.__objects[key] = obj
 
