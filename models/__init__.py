@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Create a unique FileStorage instance for your application
+Create a unique FileStorage 
 """
 from .engine.file_storage import FileStorage
 
