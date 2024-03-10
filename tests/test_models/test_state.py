@@ -1,25 +1,17 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Test suite for base_model
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.base_model import BaseModel
+from models.state import State
 
 
-class TestState(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+class TestBaseModel(unittest.TestCase):
+    def test_attr(self):
+        state = State()
+        self.assertEqual(state.name, "")
 
-    def test_name(self):
-        """
-        Tests for name inputs
-        """
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_parent(self):
+        state = State()
+        self.assertTrue(isinstance(state, BaseModel))

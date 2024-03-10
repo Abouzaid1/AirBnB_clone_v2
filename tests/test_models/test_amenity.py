@@ -1,25 +1,17 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Test suite for amenity class
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.base_model import BaseModel
+from models.amenity import Amenity
 
 
-class TestAmenity(unittest.TestCase):
-    """
-    Tests for amenities
-    """
+class TestBaseModel(unittest.TestCase):
+    def test_str(self):
+        amenity = Amenity()
+        self.assertEqual(amenity.name, "")
 
-    def test_name(self):
-        """
-        Tests for name inputs
-        """
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+    def test_parent(self):
+        amenity = Amenity()
+        self.assertTrue(isinstance(amenity, BaseModel))

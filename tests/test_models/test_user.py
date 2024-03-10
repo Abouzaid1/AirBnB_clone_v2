@@ -1,25 +1,12 @@
 #!/usr/bin/python3
 """
-Test suits for amenities
+Test suite for base_model
 """
-import os
-import models
 import unittest
-from datetime import datetime
 from models.base_model import BaseModel
 
 
-class TestUser(unittest.TestCase):
-    """
-    Tests for amenities
-    """
-
-    def test_name(self):
-        """
-        Tests for name inputs
-        """
-        pass
-
-
-if __name__ == '__main__':
-    unittest.main()
+class TestBaseModel(unittest.TestCase):
+    def test_str(self):
+        base1 = BaseModel()
+        self.assertEqual(base1.__class__, BaseModel)
